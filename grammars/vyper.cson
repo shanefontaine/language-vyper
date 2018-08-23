@@ -1,0 +1,118 @@
+'scopeName': 'source.vyper'
+'name': 'Vyper'
+'fileTypes': [
+  "vy"
+  "vyper"
+]
+'patterns': [
+  {
+    begin: "(?=(def)\\s+)"
+    end: '(:\n)'
+    comment: "Function definition"
+    patterns: [
+      {
+        captures:
+          "1":
+            name: "keyword.control"
+        match: "\\b(def)\\b"
+      }
+      {
+        captures:
+          "1":
+            name: "constant.language"
+          "2":
+            name: "constant.language"
+          "3":
+            name: "constant.language"
+        match: "\\b(address|string\\d*|bytes\\d*|decimal\\d*|int\\d*|uint\\d*|bool|hash\\d*)\\b(?:\\s+(?:indexed\\s+)?([A-Za-z_][A-Za-z0-9_]*)\\s*[,\\)])?"
+      }
+    ]
+  }
+  {
+    include: "#builtin_types"
+  }
+  {
+    comment: "Self Keyword"
+    match: "(self)+"
+    name: "variable.language"
+  }
+  {
+    comment: "True and False keywords"
+    match: "\\b(True|False)\\b"
+    name: "constant.language"
+  }
+  {
+    comment: "Language keywords"
+    match: "\\b(if|else|elif|for|while|until|return|pass|def|push|dup|swap|send|call|selfdestruct|assert|stop|throw|raise|init|_init_|___init___|____init____|true|false|this|continue|ether|wei|finney|szabo|shannon|lovelace|ada|babbage|gwei|kwei|mwei|twei|pwei|contract|units|zero_address|max_int128|min_int128|max_decimal|min_decimal|max_uint256|\\_)\\b"
+    name: "keyword.control"
+  }
+
+  {
+    captures:
+      "1":
+        name: "constant.language"
+      "2":
+        name: "keyword.control"
+    comment: "Variable definitions"
+    match: "\\b([A-Za-z_][A-Za-z0-9_]+)(\\s+(?:private|public|internal|external))?\\s+([A-Za-z_][A-Za-z0-9_]*)\\;"
+  }
+  {
+    captures:
+      "1":
+        name: "constant.language"
+      "2":
+        name: "keyword.control"
+    comment: "Variable definitions"
+    match: "\\b([A-Za-z_][A-Za-z0-9_]+)(\\s+(?:private|public|internal|external|inherited))?\\s+([A-Za-z_][A-Za-z0-9_]*)\\;"
+  }
+  {
+    captures:
+      "1":
+        name: "constant.language"
+      "2":
+        name: "constant.language"
+    comment: "msg and block special usage"
+    match: "\\b(msg|block|tx)\\.([A-Za-z_][A-Za-z0-9_]*)\\b"
+  }
+  {
+    captures:
+      "1":
+        name: "support.type"
+    comment: "Function call"
+    match: "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*\\("
+  }
+  {
+    comment: "Decorators"
+    match: "\@[a-zA-Z]+"
+    name: "support.class"
+  }
+  {
+    comment: "Strings"
+    match: "([\\\"\\'].*?[\\\"\\'])"
+    name: "string.quoted"
+  }
+  {
+    comment: "Numbers"
+    match: "\\b(\\d+)\\b"
+    name: "constant.numeric"
+  }
+  {
+    comment: "Hexadecimal"
+    match: "\\b(0[xX][a-fA-F0-9]+)\\b"
+    name: "constant.numeric"
+  }
+  {
+    comment: "Comments"
+    match: "\\#.*"
+    name: "comment"
+  }
+]
+'repository':
+  'builtin_types':
+    captures:
+      "1":
+        name: "constant.language"
+      "2":
+        name: "variable.parameter"
+    comment: "Built-in types"
+    match: "\\b(address|string\\d*|bytes\\d*|decimal\\d*|int\\d*|uint\\d*|bool|hash\\d*)\\b(?:\\s+(?:indexed\\s+)?([A-Za-z_][A-Za-z0-9_]*)\\s*[,\\)])?"

@@ -1,0 +1,16 @@
+{
+  "name": "language-vyper",
+  "version": "0.0.0",
+  "description": "Vyper language support in Atom",
+  "keywords": [
+    "vyper",
+    "ethereum",
+    "grammar"
+  ],
+  "repository": "https://github.com/shanefontaine/language-vyper",
+  "license": "MIT",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  }
+}
