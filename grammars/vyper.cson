@@ -32,11 +32,6 @@
     include: "#builtin_types"
   }
   {
-    comment: "Self Keyword"
-    match: "(self)+"
-    name: "variable.language"
-  }
-  {
     comment: "True and False keywords"
     match: "\\b(True|False)\\b"
     name: "constant.language"
@@ -46,7 +41,11 @@
     match: "\\b(if|else|elif|for|while|until|return|pass|def|push|dup|swap|send|call|selfdestruct|assert|stop|throw|raise|init|_init_|___init___|____init____|true|false|this|continue|ether|wei|finney|szabo|shannon|lovelace|ada|babbage|gwei|kwei|mwei|twei|pwei|contract|units|zero_address|max_int128|min_int128|max_decimal|min_decimal|max_uint256|\\_)\\b"
     name: "keyword.control"
   }
-
+  {
+    comment: "Self Keyword"
+    match: "(self)+"
+    name: "variable.language"
+  }
   {
     captures:
       "1":
