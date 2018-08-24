@@ -7,8 +7,8 @@
 'patterns': [
   {
     begin: "(?=(def)\\s+)"
-    end: '(:\n)'
-    comment: "Function definition"
+    end: '((?=#)|(?=//)|(?=\n)|(?=\\()|(?={))'
+    comment: "Main keywords"
     patterns: [
       {
         captures:
@@ -19,12 +19,12 @@
       {
         captures:
           "1":
-            name: "constant.language"
+            name: "entity.name.function"
           "2":
-            name: "constant.language"
+            name: "keyword.control"
           "3":
-            name: "constant.language"
-        match: "\\b(address|string\\d*|bytes\\d*|decimal\\d*|int\\d*|uint\\d*|bool|hash\\d*)\\b(?:\\s+(?:indexed\\s+)?([A-Za-z_][A-Za-z0-9_]*)\\s*[,\\)])?"
+            name: "entity.name.function"
+        match: "([A-Za-z_][A-Za-z0-9_]*)(?:\\s+(?:(is)|,)\\s+([A-Za-z_][A-Za-z0-9_]*))?"
       }
     ]
   }
