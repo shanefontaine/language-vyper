@@ -7,7 +7,7 @@
 'patterns': [
   {
     begin: "(?=(def)\\s+)"
-    end: '((?=#)|(?=//)|(?=\n)|(?=\\()|(?={))'
+    end: "((?=#)|(?=//)|(?=\n)|(?=\\()|(?={))"
     comment: "Main keywords"
     patterns: [
       {
@@ -24,7 +24,7 @@
             name: "keyword.control"
           "3":
             name: "entity.name.function"
-        match: "([A-Za-z_][A-Za-z0-9_]*)(?:\\s+(?:(is)|,)\\s+([A-Za-z_][A-Za-z0-9_]*))?"
+        match: "([A-Za-z_][A-Za-z0-9_]*)(?:\\s+([A-Za-z_][A-Za-z0-9_]*))?"
       }
     ]
   }
@@ -45,15 +45,6 @@
     comment: "Self Keyword"
     match: "(self)+"
     name: "variable.language"
-  }
-  {
-    captures:
-      "1":
-        name: "constant.language"
-      "2":
-        name: "keyword.control"
-    comment: "Variable definitions"
-    match: "\\b([A-Za-z_][A-Za-z0-9_]+)(\\s+(?:private|public|internal|external))?\\s+([A-Za-z_][A-Za-z0-9_]*)\\;"
   }
   {
     captures:

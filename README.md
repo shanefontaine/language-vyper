@@ -10,4 +10,4 @@ Package created with help from [language-solidity](https://github.com/jesseweed/
 
 Part of an ERC20 token:
 
-![vyper-erc20](https://user-images.githubusercontent.com/9441295/44554513-17fdd480-a6e6-11e8-9d0c-8f9527408fc9.png)
+![vyper-erc20_v0.2.0](https://user-images.githubusercontent.com/9441295/44609541-e439b200-a7ac-11e8-9b15-3b39ccf23796.png)
