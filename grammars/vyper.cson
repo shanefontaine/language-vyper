@@ -38,7 +38,7 @@
   }
   {
     comment: "Language keywords"
-    match: "\\b(if|else|elif|for|while|until|return|pass|def|push|dup|swap|send|call|selfdestruct|assert|stop|throw|raise|init|_init_|___init___|____init____|true|false|this|continue|ether|wei|finney|szabo|shannon|lovelace|ada|babbage|gwei|kwei|mwei|twei|pwei|contract|units|zero_address|max_int128|min_int128|max_decimal|min_decimal|max_uint256|and|or|not|\\_)\\b"
+    match: "\\b(if|else|elif|for|while|until|return|pass|def|push|dup|swap|send|call|selfdestruct|assert|stop|throw|raise|init|_init_|___init___|____init____|true|false|this|continue|ether|wei|finney|szabo|shannon|lovelace|ada|babbage|gwei|kwei|mwei|twei|pwei|contract|units|zero_address|max_int128|min_int128|max_decimal|min_decimal|max_uint256|and|or|not|break|continue|\\_)\\b"
     name: "keyword.control"
   }
   {
@@ -106,4 +106,3 @@
         name: "variable.parameter"
     comment: "Built-in types"
     match: "\\b(address|string\\d*|bytes\\d*|decimal\\d*|int\\d*|uint\\d*|bool|hash\\d*)\\b(?:\\s+(?:indexed\\s+)?([A-Za-z_][A-Za-z0-9_]*)\\s*[,\\)])?"
-99
