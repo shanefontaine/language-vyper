@@ -38,7 +38,7 @@
   }
   {
     comment: "Language keywords"
-    match: "\\b(self|if|else|elif|for|while|until|return|pass|def|push|dup|swap|send|call|selfdestruct|assert|stop|throw|raise|init|_init_|___init___|____init____|true|false|this|continue|ether|wei|finney|szabo|shannon|lovelace|ada|babbage|gwei|kwei|mwei|twei|pwei|contract|units|zero_address|max_int128|min_int128|max_decimal|min_decimal|max_uint256|and|or|not|break|continue|\\_)\\b"
+    match: "\\b(self|if|else|elif|for|while|until|return|pass|def|push|dup|swap|send|call|selfdestruct|assert|stop|throw|raise|init|_init_|___init___|____init____|true|false|this|continue|ether|wei|finney|szabo|shannon|lovelace|ada|babbage|gwei|kwei|mwei|twei|pwei|contract|units|zero_address|max_int128|min_int128|max_decimal|min_decimal|max_uint256|and|or|not|break|continue|import|from|implements|\\_)\\b"
     name: "keyword.control"
   }
   {
