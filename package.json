@@ -1,6 +1,6 @@
 {
   "name": "language-vyper",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Vyper language support in Atom",
   "keywords": [
     "vyper",
